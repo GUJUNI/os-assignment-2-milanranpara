@@ -1,0 +1,30 @@
+NAME		:	MILAN RANPARA
+ROLL		:	30
+COURSE	:	MCA-2
+SUBJECT	:	OPERATING SYSTEMS
+ASSIGNMENT	:	ASSIGNMNET 2
+-----------------------------------------------------------------------------------------------------------------------------------------
+Program-4
+Write a script that takes file name from user and substitute all spaces " " with # value (Use grep/sed)
+
+echo -n "Enter Filename : "
+read file
+if [ ! -f "$file" ]; then
+  echo "File not found!"
+  exit 1
+else
+  sed -i 's/ /#/g' $file
+  echo "Spaces replaced with # in $file"
+fi
+
+> cat demo2
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT
+
+Enter Filename : f3
+Spaces replaced with # in f3
+
+This#is#a#demo#program#that#replaces#space#with##.
+Demo#shell#script.
+Welcome#to#Gujarat#University.
